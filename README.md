@@ -7,7 +7,7 @@ Esse projeto simula uma API REST
   <li>NODEJS</li>
   <li>MONGODB</li>
   <li>JAVASCRIPT</li>
-  <li>MONGODB Atlas</li>
+  <li>MONGODB ATLAS</li>
   <li>POSTMAN</li>
 </ul>
 
