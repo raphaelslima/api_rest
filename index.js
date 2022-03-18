@@ -8,6 +8,9 @@ const mongoose = require('mongoose')
 
 const port = 3000
 
+// Importação do arquivo responsável pelas rotas
+const apiRoutes = require('./src/routes/personRoutes')
+
 // Definir o tipo de resposta que teremos na API
 app.use(
   express.urlencoded({
@@ -17,10 +20,8 @@ app.use(
 
 app.use(express.json())
 
-// Primeira rota
-app.get('/', (req, res) => {
-  return res.json({ message: 'API rodando' })
-})
+// Rotas da API
+app.use('/api', apiRoutes)
 
 mongoose
   .connect(
@@ -33,6 +34,6 @@ mongoose
       console.log(`API rodando: http://localhost:3000/ `)
     })
   })
-  .catch(err => {
-    console.log(err)
+  .catch(error => {
+    console.log(errpr)
   })
